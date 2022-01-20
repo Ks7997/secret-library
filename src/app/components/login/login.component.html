@@ -1,0 +1,16 @@
+<form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Login</mat-label>
+    <input matInput type="text"
+           [(ngModel)]="user.login" name="Username"
+           #login="ngModel" required>
+    <mat-error *ngIf="login.errors?.required">Username is required</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password"
+           [(ngModel)]="user.password" name="password"
+           #password="ngModel" required>
+    <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+  </mat-form-field>
+</form>
