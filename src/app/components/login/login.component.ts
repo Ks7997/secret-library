@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from "../../services/user.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,12 +10,21 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   user = {login: '', password: ''};
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
     console.log("User: ", this.user);
+    const isUserValid = this.userService.loginUser(this.user.login, this.user.password);
+    console.log("isUserValid ", isUserValid);
+    if (isUserValid) {
+      this.router.navigate(["/books"]);
+    }
+
   }
 }

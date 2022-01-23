@@ -3,6 +3,7 @@ import {LoginComponent} from "../components/login/login.component";
 import {BooksComponent} from "../components/books/books.component";
 
 export const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'books', component: BooksComponent}
+  { path: 'login', component: LoginComponent },
+  { path: 'books', component: BooksComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];

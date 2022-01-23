@@ -5,6 +5,7 @@ import {User} from "../models/user.model";
   providedIn: 'root'
 })
 export class UserService {
+  private currentUser: User | null = null;
 
   getUsersList(): User[] {
     return [
@@ -12,5 +13,18 @@ export class UserService {
       new User('medium', 'medium', 1),
       new User('low', 'low', 2)
     ];
+  }
+
+  getCurrentUser(): User | null {
+    return this.currentUser;
+  }
+
+  loginUser(login: string, password: string): boolean {
+    const foundUser = this.getUsersList().find(user => user.login === login && user.password === password);
+    if (foundUser !== undefined) {
+      this.currentUser = foundUser;
+      return true;
+    } else
+      return false;
   }
 }
