@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 
+// Routing module
 @NgModule({
   declarations: [],
   imports: [

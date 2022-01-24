@@ -1,3 +1,4 @@
+// Describes a single user
 export class User {
   login: string;
   password: string;

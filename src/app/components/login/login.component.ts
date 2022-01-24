@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserService } from "../../services/user.service";
 import { Router } from "@angular/router";
 
+// Login page
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,10 +16,9 @@ export class LoginComponent {
     private userService: UserService
   ) { }
 
+  // Validates and saves entered login and password
   onSubmit() {
-    console.log("User: ", this.user);
     const isUserValid = this.userService.loginUser(this.user.login, this.user.password);
-    console.log("isUserValid ", isUserValid);
     if (isUserValid) {
       this.router.navigate(["/books"]);
     }

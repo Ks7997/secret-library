@@ -3,6 +3,7 @@ import { BookService } from "../../services/book.service";
 import { Book } from "../../models/book.model";
 import { UserService } from "../../services/user.service";
 
+// Component for books page left panel. Shows book list
 @Component({
   selector: 'app-left-panel',
   templateUrl: './left-panel.component.html',
@@ -27,6 +28,7 @@ export class LeftPanelComponent implements OnInit {
     }
   }
 
+  // Sets current selected book
   onBookClick(book: Book): void {
     this.bookService.currentBook = book;
   }

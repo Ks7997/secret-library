@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { Book } from "../models/book.model";
 import { Chapter } from "../models/chapter.model";
 
+// Service for working with books
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
   currentBook: Book | null = null;
 
+  // Book list
   getBookList(): Book[] {
     return [
       new Book("Abbey", [

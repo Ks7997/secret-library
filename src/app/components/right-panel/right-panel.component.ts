@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BookService } from "../../services/book.service";
 
+// Component for books page right panel
 @Component({
   selector: 'app-right-panel',
   templateUrl: './right-panel.component.html',
@@ -12,6 +13,7 @@ export class RightPanelComponent {
     private bookService: BookService
   ) { }
 
+  // Selected book name
   get bookName() {
     return this.bookService.currentBook?.name ?? 'no book selected';
   }

@@ -1,3 +1,4 @@
+// Describes a single chapter
 export class Chapter {
   title: string;
   symbolsCount: number;

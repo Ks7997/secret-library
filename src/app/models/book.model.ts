@@ -1,5 +1,6 @@
 import {Chapter} from "./chapter.model";
 
+// Describes a single book
 export class Book {
   name: string;
   chapters: Chapter[];
