@@ -9,9 +9,9 @@ export class UserService {
 
   getUsersList(): User[] {
     return [
-      new User('high', 'high', 0),
-      new User('medium', 'medium', 1),
-      new User('low', 'low', 2)
+      new User('high', '12345', 0),
+      new User('medium', '12345', 1),
+      new User('low', '12345', 2)
     ];
   }
 

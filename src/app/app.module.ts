@@ -10,12 +10,18 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {LeftPanelComponent} from './components/left-panel/left-panel.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {RightPanelComponent} from './components/right-panel/right-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    BooksComponent
+    BooksComponent,
+    LeftPanelComponent,
+    RightPanelComponent
   ],
   imports: [
     AppRoutingModule,
@@ -24,7 +30,9 @@ import {MatButtonModule} from "@angular/material/button";
     NoopAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
